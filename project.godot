@@ -1,7 +1,7 @@
 ; Engine configuration file.
 ; It's best edited using the editor UI and not directly,
 ; since the parameters that go here are not all obvious.
-;
+; 
 ; Format:
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
@@ -11,18 +11,23 @@ config_version=5
 [application]
 
 config/name="Default 3D Project"
-config/description="Enter an interesting project description here!"
+config/description="Basic 3D project template with FPS controller"
 run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 
 [autoload]
 
-Globals="*res://Scripts/Globals.gd"
+Globals="*res://Scripts/Autoloads/Globals.gd"
+Utils="*res://Scripts/Autoloads/Utils.gd"
 
 [display]
 
 window/size/mode=3
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/previous-tab/plugin.cfg")
 
 [input]
 
@@ -61,3 +66,4 @@ db_quit={
 
 environment/defaults/default_clear_color=Color(0.140625, 0.140625, 0.140625, 1)
 environment/defaults/default_environment="res://default_env.tres"
+
